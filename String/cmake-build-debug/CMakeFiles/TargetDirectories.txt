@@ -1,0 +1,3 @@
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/cmake-build-debug/CMakeFiles/String.dir

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/String.hh
+iostream
+-
+stdint.h
+-
+cstring
+-
+
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/main.cpp
+String.hh
+/Users/caowanying/dynamic-memory-yan-zhang-wanying-cao/dynamicmemory/String/String.hh
+iostream
+-
+cstring
+-
+
