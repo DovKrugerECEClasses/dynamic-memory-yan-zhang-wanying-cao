@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 using namespace std;
-
+/*
+ *Author: Wanying Cao (10440141)
+ */
 template<typename T>
 class GrowArray {
 private:
