@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cstring>
+/*
+ *Author: Wanying Cao (10440141)
+ */
 using namespace std;
 template <typename T>
 void sort(T x[], int n){
