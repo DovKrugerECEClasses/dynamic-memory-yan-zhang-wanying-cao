@@ -1,5 +1,7 @@
 #include "Fraction.hh"
-
+/*
+ *Author: Wanying Cao (10440141)
+ */
 using namespace std;
 Fraction::Fraction(int n, int d):num(n),den(d) {
 }
