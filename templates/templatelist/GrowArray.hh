@@ -60,7 +60,7 @@ public:
 
 	friend ostream& operator <<(ostream& s, const GrowArray<T>& list) {
     for (int i = 0; i < list.used; i++)
-			s << list[i] << ' ';
+			s << list.data[i] << ' ';
 		return s;
 	}
 };
