@@ -34,7 +34,7 @@ public:
 		data[i]=g.data[i];
 		}
 	}
-	GrowArray operator =(const GrowArray& g){
+	friend GrowArray operator =(const GrowArray& g){
 		this->capacity=g.capacity;
 		this->used=g.used;
 		for(int i=0;i < g.used;i++){
