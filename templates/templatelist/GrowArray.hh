@@ -16,7 +16,8 @@ private:
 			return; }// don't grow unless you have to
 		T* old = data;
 		//TODO: every time the list grows, double it!!!
-		data = new T[used*2]; // calls T::T()
+		capacity*=2;
+		data = new T[capacity]; // calls T::T()
 		for (int i = 0; i < used; i++)
 			data[i] = old[i];
 		delete [] old;
