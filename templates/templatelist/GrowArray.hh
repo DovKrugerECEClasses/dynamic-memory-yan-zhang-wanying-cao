@@ -34,9 +34,11 @@ public:
 		data[i]=g.data[i];
 		}
 	}
-	T operator =(const T& a){
-		for(int i=0;i < a.used;i++){
-			this->data[i]=a.data[i];
+	GrowArray operator =(const GrowArray& g){
+		this->capacity=g.capacity;
+		this->used=g.used;
+		for(int i=0;i < g.used;i++){
+			this->data[i]=g.data[i];
 		}
 	}
 	void addEnd(const T& v) {
