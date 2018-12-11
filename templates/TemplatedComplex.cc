@@ -3,18 +3,19 @@ using namespace std;
 /*
  *Author: Wanying Cao (10440141)
  */
-template<typename Precision>
+template<typename T>
 class Complex{
 private:
-	Precision r,i;
+	T real,image;
 public:
-	Complex(Precision r,Precision i){}
+	Complex(T r,T i):real(r),image(i){}
 	friend Complex operator + (const Complex& a,const Complex& b){
 		return Complex(a.r+b.r, a.i+b.i);
 	}
-	friend ostream& operator << (ostream& s,const Complex& b)//(ostream& s,const Complex<T>& b)  old way
+	friend ostream& operator << (ostream& s,const Complex& c)//(ostream& s,const Complex<T>& b)  old way
 	{
-		return s<<b.r<<','<<b.i;
+		s<<'('<<c.r<<','<<c.i<<')';
+		return s;
 	}
 
 };
