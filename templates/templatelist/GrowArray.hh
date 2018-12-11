@@ -36,12 +36,12 @@ public:
 		data[i]=g.data[i];
 		}
 	}
-	friend GrowArray operator =(const GrowArray& g){
+	GrowArray& operator =(const GrowArray& g){
+		GrowArray copy(orig);
 		this->capacity=g.capacity;
 		this->used=g.used;
-		for(int i=0;i < g.used;i++){
-			this->data[i]=g.data[i];
-		}
+		swap(this->data,g.data);
+		return *this;
 	}
 	void addEnd(const T& v) {
 		checkGrow();
