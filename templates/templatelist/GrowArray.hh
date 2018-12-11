@@ -7,8 +7,8 @@ using namespace std;
 template<typename T>
 class GrowArray {
 private:
-	int used;
 	int capacity;
+	int used;
 	T* data;
 	void checkGrow() {
 		if (used < capacity)
@@ -18,14 +18,22 @@ private:
 		data = new T[used*2]; // calls T::T()
 		for (int i = 0; i < used; i++)
 			data[i] = old[i];
+		delete [] old;
 		used++;
 	}
 public:
 	GrowArray() : used(0), capacity(0), data(nullptr) {}
 	GrowArray(int  initialCapacity)
-		: used(0), capacity(initialCapacity), data(new T[used]){}
+		: used(0), capacity(initialCapacity), data(new T[initialCapacity]){}
 	//TODO: add destructor, copy constructor, operator =
-	~GrowArray(){}
+	~GrowArray(){
+	delete [] data;
+	}
+	GrowArray(const GrowArray& g):used(g.used), capacity(g.capacity), data(new T[capacity]){
+		for(int i=0;i<used;i++){
+		data[i]=g.data[i];
+		}
+	}
 	T operator =(const T& a){
 		for(int i=0;i < a.used;i++){
 			this->data[i]=a.data[i];
