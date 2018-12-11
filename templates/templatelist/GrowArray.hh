@@ -37,7 +37,7 @@ public:
 		}
 	}
 	GrowArray& operator =(const GrowArray& g){
-		GrowArray copy(orig);
+		GrowArray copy(g);
 		this->capacity=g.capacity;
 		this->used=g.used;
 		swap(this->data,g.data);
