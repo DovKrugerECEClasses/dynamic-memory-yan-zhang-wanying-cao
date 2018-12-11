@@ -1,0 +1,8 @@
+bank:Main.o Account.o
+g++ Main.o Account.o -o bank
+
+Main.o:Main.cc Account.hh
+g++ -c Main.cc
+
+Account.o:Account.cc Account.hh
+g++ -c Account.cc
