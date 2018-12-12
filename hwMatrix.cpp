@@ -17,13 +17,17 @@ public:
 			m[i] = v;
 		}
 	}
-	Matrix(const Matrix& orig) : rows(orig.rows), cols(orig.cols){
+	Matrix(const Matrix& orig) : Matrix(orig.rows,orig.cols){
 		for (uint32_t i = 0; i < rows*cols; i++) {
 			m[i] = orig.m[i];
 		}
 	}
 
 	// add move constructor for 20% bonus
+	Matrix(Matrix&& orig){
+		m=orig.m;
+		orig.m=nullptr;
+	}
 	
 	Matrix& operator =(const Matrix& orig) {
 		Matrix copy(orig);
