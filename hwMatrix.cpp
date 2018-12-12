@@ -70,7 +70,7 @@ public:
 		Matrix ans(a.rows, b.cols, 0.0);
 		for (uint32_t i = 0; i < a.rows*b.cols; i++) {
 			ans.m[i]=0;
-			for (int j = 0; j < a.rows; j++) {
+			for (int j = 0; j < a.cols; j++) {
 				ans.m[i] += a.m[a.rows*(i/2)+j]*b.m[i+j*b.cols];
 			}
 		}
