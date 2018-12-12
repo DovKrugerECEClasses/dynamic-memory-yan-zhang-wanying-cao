@@ -2,7 +2,6 @@
 using namespace std;
 /*
  *Author: Wanying Cao (10440141)
- * Cite: Christian Jensen for how to use "[]"
  */
 class IllegalSize {
 };
@@ -48,10 +47,10 @@ public:
 		return m[r * cols + c ];
 	}
 	const double* operator[](uint32_t n) const {
-		return &m[n];
+		return &m[n*this->cols];
 	}
 	double* operator[](uint32_t n) {
-		return &m[n];
+		return &m[n*this->cols];
 	}
 
 	friend  Matrix operator +(const Matrix& a, const Matrix& b) {
