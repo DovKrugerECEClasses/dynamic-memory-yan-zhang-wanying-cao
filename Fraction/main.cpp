@@ -7,4 +7,5 @@ int main() {
 	Fraction c = a + b;
 	Fraction d = a - b;
 	cout << c << '\n';
+	cout << d << '\n';
 }
