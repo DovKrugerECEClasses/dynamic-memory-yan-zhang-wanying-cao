@@ -7,8 +7,8 @@ using namespace std;
 template<typename T>
 class GrowArray {
 private:
-	int capacity;
 	int used;
+	int capacity;
 	T* data;
 	void checkGrow() {
 		if (used < capacity){
