@@ -24,7 +24,7 @@ public:
 	}
 
 	// add move constructor for 20% bonus
-	Matrix(Matrix&& orig)：Matrix(rows,cols){
+	Matrix(Matrix&& orig)：Matrix(orig.rows,orig.cols){
 		 m=orig.m;
 		orig.m=nullptr;
 	}
