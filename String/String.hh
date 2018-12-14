@@ -17,7 +17,11 @@ private:
 		if(newLen > capacity){
 			capacity= newLen*2;// grow allocate double the size of newLen
 			const char * old =s;
-			s = ;
+			s = new char[capacity];
+			for(int i=0;i<newLen,i++)
+			{
+				s[i]=old[i];
+			}
 		}
 	}
 public:
